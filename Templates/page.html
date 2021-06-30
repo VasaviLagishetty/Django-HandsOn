@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for i in movie %}
+
+{% if type == 'movie' %}
+    <p>{{i.id}}, {{i.name}}, {{i.director}}</p>
+{% else %}
+    <p>{{i.name}}, {{i.duration}}</p>
+
+{% endif %}
+{% endfor %}
+
+{% endblock %}
